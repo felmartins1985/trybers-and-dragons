@@ -9,10 +9,10 @@ export default class PVP extends Battle {
   }
 
   fight(): number {
-    while (this.player.lifePoints > 0 && this._enemy.lifePoints > 0) {
-      this.player.attack(this._enemy);
-      this._enemy.attack(this.player);
+    while (this._player.lifePoints > 0 && this._enemy.lifePoints > 0) {
+      this._player.attack(this._enemy);
+      this._enemy.attack(this._player);
     }
-    return this.player.lifePoints === -1 ? -1 : 1;
+    return this._player.lifePoints === -1 ? -1 : 1;
   }
 }
